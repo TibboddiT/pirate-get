@@ -58,7 +58,7 @@ class Printer:
             table.align['SIZE'] = 'r'
             table.align['UPLOAD'] = 'l'
 
-        table.max_width = columns
+        table.max_width = columns - 1
         table.border = False
         table.padding_width = 1
 

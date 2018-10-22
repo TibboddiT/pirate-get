@@ -39,7 +39,7 @@ class Printer:
     # TODO: extract the name from the search results
     #       instead of from the magnet link when possible
     def search_results(self, results, local=None):
-        columns = shutil.get_terminal_size((80, 20)).columns
+        columns = shutil.get_terminal_size((80, 20)).columns - 1
         even = True
 
         if local:
@@ -58,7 +58,7 @@ class Printer:
             table.align['SIZE'] = 'r'
             table.align['UPLOAD'] = 'l'
 
-        table.max_width = columns - 1
+        table.max_width = columns
         table.border = False
         table.padding_width = 1
 
